@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Cuenta</title>
+
+
+</head>
+<body>
+<h2>Su saldo acltual es: </h2>{{saldo}}
+<br>
+
+<form action="/+saldo?username={{usuario}}" method="POST">
+    <label for="username">Cantidad a ingresar: </label><br>
+    <input type="text" id="sal" name="sal"><br>
+    
+    <input type="submit" value="Submit">
+</form>
+
+<form action="/-saldo?username={{usuario}}" method="POST">
+    <label for="username">Cantidad a restar: </label><br>
+    <input type="text" id="sal" name="sal"><br>
+    
+    <input type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+<form action="/administracion" method="GET">
+    <input type="hidden" name="username" id="username" value="{{usuario}}">
+    <input type="submit" value="Administrador">
+</form>
+  
+</body>
+</html>
