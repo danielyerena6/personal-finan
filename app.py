@@ -52,7 +52,10 @@ def cuenta():
 
 @app.route("/+saldo",methods=["GET","POST"])
 def sal():
-    abono=float(request.form["sal"])
+    abono=request.form["sal"]
+    if abono=="":
+        abono=0.0
+    abono=float(abono)
     usuario=request.args.get('username')
     obj4=Ingreso(usuario)
     obj4.ingresoSemanal(abono)
@@ -60,7 +63,10 @@ def sal():
 
 @app.route("/-saldo",methods=["GET","POST"])
 def resta():
-    abono=float(request.form["sal"])
+    abono=request.form["sal"]
+    if abono=="":
+        abono=0.0
+    abono=float(abono)
     usuario=request.args.get('username')
     obj4=Ingreso(usuario)
     obj4.resta(abono)
