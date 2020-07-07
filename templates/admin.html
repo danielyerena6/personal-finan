@@ -8,6 +8,15 @@
 </style>
 </head>
 <body>
+    <div >
+        <form action="/cuenta" method="GET">
+            <input type="hidden" name="username" id="username" value="{{administrador}}">
+            <input type="submit" value="Cuenta">
+        
+        </form>
+
+
+    </div>
     <table >
         <tr>
           <th>Usuario</th>
@@ -17,6 +26,8 @@
           <th>Administrador</th>
           <th>Acciones</th>
         </tr>
+
+
         
 
         {%for i in n%}
@@ -45,5 +56,7 @@
         
         {%endfor%}
       </table>
+
+    
 </body>
 </html>

@@ -118,7 +118,6 @@ class Administrador:
     
     def Eliminar(self):
         usuario=self.usuario
-        
         conexion=sqlite3.connect("BasedeDatos1.db")
         cursor=conexion.cursor()
         cursor.execute("DELETE  FROM PERSONAS WHERE usuario='{}'".format(usuario))

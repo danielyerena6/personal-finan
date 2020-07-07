@@ -33,8 +33,6 @@ def saludo():
     
     usuario=request.form["username"]
     contra=request.form["pwd"]
-    print(usuario)
-    print(type(usuario))
     obj1=Usuario(usuario,contra)
     aux=obj1.initSesion()
     if aux:
@@ -103,4 +101,4 @@ def eliminar():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
